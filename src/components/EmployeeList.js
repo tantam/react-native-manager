@@ -7,6 +7,7 @@ import {View, Text, ListView} from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 import {employeesFetch} from '../actions'
 import {connect} from 'react-redux'
+import {Actions} from 'react-native-router-flux';
 
 class EmployeeList extends Component {
     componentWillMount() {
@@ -34,9 +35,10 @@ class EmployeeList extends Component {
         return employees.map((l, i) => {
             return (
                 <ListItem
-                    roundAvatar
-                    avatar={{uri:'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg'}}
                     key={i}
+                    onPress={()=>{
+                      Actions.employeeEdit({ employee: l });
+ }}
                     title={l.name}
                 />
             )
