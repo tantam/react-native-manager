@@ -65,6 +65,7 @@ class EmployeeEdit extends Component {
 
                 <Modal
                     open={this.state.openDeleteConfirm}
+                    closeOnTouchOutside={false}
                     style={{alignItems: 'center'}}>
                     <View style={{}}>
                         <Text style={{textAlign:'center',fontSize: 20, marginBottom: 5}}>Delete this employee!</Text>
