@@ -17,8 +17,7 @@ class EmployeeCreate extends Component {
 
     render() {
         return (
-            <Card
-                title='Create Form'>
+            <View>
 
                 <EmployeeForm {...this.props} />
 
@@ -30,7 +29,7 @@ class EmployeeCreate extends Component {
                         title={'Create'}
                     />
                 </View>
-            </Card>
+            </View>
         )
     }
 }

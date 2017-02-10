@@ -4,14 +4,14 @@
 import React, {Component
 } from 'react';
 
-import {Picker} from 'react-native'
+import {Picker, View} from 'react-native'
 
 import {FormLabel, FormInput, Card, Button} from 'react-native-elements'
 
 export class EmployeeForm extends Component {
 	render() {
 		return (
-			<Card>
+			<View>
         <FormLabel>Name</FormLabel>
         <FormInput
             onChangeText={value=>this.props.employeeUpdate({prop:'name',value:value})}
@@ -36,7 +36,7 @@ export class EmployeeForm extends Component {
             <Picker.Item label="Saturday" value="Saturday" />
             <Picker.Item label="Sunday" value="Sunday" />
         </Picker>
-      </Card>
+      </View>
 		);
 	}
 }
